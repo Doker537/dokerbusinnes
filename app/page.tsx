@@ -1,12 +1,38 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Camera, Video, Edit, Palette, Clock, Star, CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { useEffect } from "react"
 
 export default function HomePage() {
     const whatsappUrl =
         "https://api.whatsapp.com/send/?phone=79935844456&text=Здравствуйте! Хочу узнать подробнее о ваших услугах фото и видео съемки&type=phone_number&app_absent=0"
+
+    useEffect(() => {
+        // Добавление скрипта Яндекс.Метрики
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            }
+            m[i].l = 1 * new Date()
+            for (var j = 0; j < e.scripts.length; j++) {
+                if (e.scripts[j].src === r) return
+            }
+            k = e.createElement(t)
+            a = e.getElementsByTagName(t)[0]
+            k.async = 1
+            k.src = r
+            a.parentNode.insertBefore(k, a)
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym")
+
+        ym(103121125, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        })
+    }, [])
 
     return (
         <div className="min-h-screen bg-white">
