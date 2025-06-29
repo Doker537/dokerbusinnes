@@ -68,6 +68,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/contract" className="text-gray-600 hover:text-black transition-colors">
+                  Договор
+                </Link>
+              </li>
+              <li>
                 <Link
                   href="https://dokerphoto.ru/moi-raboty"
                   target="_blank"

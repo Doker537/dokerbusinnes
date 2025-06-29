@@ -13,12 +13,13 @@ export function Navigation() {
   const whatsappUrl =
     "https://api.whatsapp.com/send/?phone=79935844456&text=Здравствуйте! Хочу узнать о ваших услугах&type=phone_number&app_absent=0"
 
-  const navigation = [
-    { name: "Главная", href: "/" },
-    { name: "Услуги", href: "/services" },
-    { name: "Обо мне", href: "/about" },
-    { name: "Контакты", href: "/contact" },
-  ]
+    const navigation = [
+        { name: "Главная", href: "/" },
+        { name: "Услуги", href: "/services" },
+        { name: "Договор", href: "/contract" },
+        { name: "Обо мне", href: "/about" },
+        { name: "Контакты", href: "/contact" },
+    ]
 
   return (
     <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
