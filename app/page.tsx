@@ -285,6 +285,7 @@ export default function HomePage() {
             </Link>
           </Button>
         </div>
+      </section>
     </div>
   )
 }
