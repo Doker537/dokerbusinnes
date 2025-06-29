@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Профессиональный фотограф и видеограф</h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Создаю качественный контент для бизнеса уже более 5 лет. Специализируюсь на корпоративной съемке, рекламном
+            Создаю качественный контент для бизнеса. Специализируюсь на корпоративной съемке, рекламном
             контенте и видео для социальных сетей.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
