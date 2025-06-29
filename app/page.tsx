@@ -3,10 +3,40 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Camera, Video, Edit, Palette, Clock, Star, CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { useEffect } from "react" // в начало файла, если ещё не импортировано
+
 
 export default function HomePage() {
   const whatsappUrl =
     "https://api.whatsapp.com/send/?phone=79935844456&text=Здравствуйте! Хочу узнать подробнее о ваших услугах фото и видео съемки&type=phone_number&app_absent=0"
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.id = "tmr-code";
+        script.innerHTML = `
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3664289", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+      if (d.getElementById(id)) return;
+      var ts = d.createElement("script");
+      ts.type = "text/javascript";
+      ts.async = true;
+      ts.id = id;
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+      var f = function () {
+        var s = d.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ts, s);
+      };
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else {
+        f();
+      }
+    })(document, window, "tmr-code");
+  `;
+        document.head.appendChild(script);
+    }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -285,7 +315,17 @@ export default function HomePage() {
             </Link>
           </Button>
         </div>
-      </section>
+          </section>
+          <noscript>
+              <div>
+                  <img
+                      src="https://top-fwz1.mail.ru/counter?id=3664289;js=na"
+                      style={{ position: "absolute", left: "-9999px" }}
+                      alt="Top.Mail.Ru"
+                  />
+              </div>
+          </noscript>
+
     </div>
   )
 }
